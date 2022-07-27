@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raices</title>
     <link rel="stylesheet" href="build/css/app.css">
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "> </script>
 </head>
 <body>
     
@@ -99,7 +100,16 @@
 
             </fieldset>
 
-            <input type="submit" value="Enviar" class="boton-verde">
+            
+
+            <script > 
+            function alerta(){
+                alert("fue enviado con exito");
+            }
+            
+            </script>
+
+            <input type="submit" oneclick="window.alert('fue enviado con exito')" value="Enviar" class="boton-verde">
         </form>
     </main>
 
