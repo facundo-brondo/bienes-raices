@@ -45,7 +45,7 @@
 
         <h2>Llene el formulario de Contacto</h2>
 
-        <form class="formulario">
+        <form class="formulario" id="form-contact">
             <fieldset>
                 <legend>Información Personal</legend>
 
@@ -100,16 +100,7 @@
 
             </fieldset>
 
-            
-
-            <script > 
-            function alerta(){
-                alert("fue enviado con exito");
-            }
-            
-            </script>
-
-            <input type="submit" oneclick="window.alert('fue enviado con exito')" value="Enviar" class="boton-verde">
+            <input id="mensaje" type="submit" value="Enviar" class="boton-verde" onclick="MESAJE_UNO()">
         </form>
     </main>
 
@@ -126,6 +117,6 @@
         <p class="copyright">Todos los derechos Reservados Facundo Brondo  &copy;</p>
     </footer>
 
-    <script src="build/js/bundle.min.js"></script>
+    <script src="./build/js/app.js"></script>
 </body>
 </html>
