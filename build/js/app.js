@@ -111,8 +111,7 @@ formContact.addEventListener("submit", (e) =>{
     if (nombre == "" && telefono== "" && email == "" && mensaje== ""){
         alert("no estan los datos completos")
     } else{
-        document.body.innerHTML += `<h2> los datos $
-        (nombre), $(telefono), $(email) y $(mensaje), se enviaron correctamente </h2>`
+        alert(  "Los datos Nombre,Telefono,Email y Mensaje, se enviaron correctamente ")
     }
 })
 
