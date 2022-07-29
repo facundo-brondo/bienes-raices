@@ -92,31 +92,52 @@ function navegacionResponsive() {
 //     }
 
    
-// }
-let formContact = document.getElementById("form-contact");
-
-formContact.addEventListener("submit", (e) =>{
-
-    e.preventDefault();
-    console.dir(e.target.children);
-
-// guardamos los valores de los imputs
-
-    let nombre = e.target.children[0].value;
-    let telefono = e.target.children[1].value;
-    let email = e.target.children[2].value;
-    let mensaje = e.target.children[3].value;
-
-    // se valida que no este vacios 
-    if (nombre == "" && telefono== "" && email == "" && mensaje== ""){
-        alert("no estan los datos completos")
-    } else{
-        alert(  "Los datos Nombre,Telefono,Email y Mensaje, se enviaron correctamente ")
-    }
-})
-
- const Enviar = document.getElementById('mensaje')
+// } 
+const Enviar = document.getElementById('mensaje')
 
     function MESAJE_UNO() {
-        alert('mensaje enviado')
+        swal.fire({
+            title: 'Mensaje',
+            Text: 'Mensaje Enviado',
+            icon: 'succes',
+            confirmButtonText:'Confirmar'
+        })
     }
+    
+
+    let formContact = document.getElementById("form-contact");
+
+    formContact.addEventListener("submit", (e) =>{
+    
+        e.preventDefault();
+        console.dir(e.target.children);
+    
+    // guardamos los valores de los imputs
+    
+        let nombre = e.target.children[0].value;
+        let telefono = e.target.children[1].value;
+        let email = e.target.children[2].value;
+        let mensaje = e.target.children[3].value;
+    
+        // se valida que no este vacios 
+        if (nombre == "" && telefono== "" && email == "" && mensaje== ""){
+    
+            Swal.fire({
+                title:'Error',
+                Text:'no estan los datos completos',
+                icon: 'error',
+                confirmButtonText: 'Confirmar'
+                // "no estan los datos completos"
+            });
+        
+          } else{
+        
+            swal.fire({
+                title:'Enviado',
+                Text:'Los datos Nombre,Telefono,Email y Mensaje, se enviaron correctamente',
+                icon: 'succes',
+                confirmButtonText:'Confirmar'
+            });
+          }
+    })
+
